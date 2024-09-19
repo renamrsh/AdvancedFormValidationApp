@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">AdvancedFormValidationApp</string>
+    <style name="boldText">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
 </resources>

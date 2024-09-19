@@ -51,8 +51,20 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(MainActivity.this, "Prosze wprowadzić adres e-mail", Toast.LENGTH_SHORT).show();
                 }else if(!android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()){
                     Toast.makeText(MainActivity.this, "Niepoprawny adres e-mail", Toast.LENGTH_SHORT).show();
-                }else{
+                }else if(numberTelefonu.length()<9){
+                    Toast.makeText(MainActivity.this, "Numer telefonu powinien zawierac conajmniej 9 znakow", Toast.LENGTH_SHORT).show();
+                }else if(haslo.length()<6){
+                    Toast.makeText(MainActivity.this, "Haslo powinno zawierac conajmniej 6 znakow", Toast.LENGTH_SHORT).show();
+                }else if(!haslo.equals(podtwHasla)){
+                    Toast.makeText(MainActivity.this, "Hasla nie zgadzają się", Toast.LENGTH_SHORT).show();
+                } else{
                     Toast.makeText(MainActivity.this, "Formularz przeslany poprawnie", Toast.LENGTH_SHORT).show();
+                    editTextImie.setText("");
+                    editTextNazwisko.setText("");
+                    editTextEmail.setText("");
+                    editTextNnumerTelefonu.setText("");
+                    editTextHaslo.setText("");
+                    editTextPodtwHasla.setText("");
                 }
             }
         });
